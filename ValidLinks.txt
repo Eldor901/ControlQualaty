@@ -1,0 +1,36 @@
+[
+    {
+        "url": "http://52.136.215.164/broken-links/",
+        "statusCode": 200
+    },
+    {
+        "url": "http://52.136.215.164/broken-links/contact.html",
+        "statusCode": 200
+    },
+    {
+        "url": "http://52.136.215.164/broken-links/pricing.html",
+        "statusCode": 200
+    },
+    {
+        "url": "http://52.136.215.164/broken-links/work.html",
+        "statusCode": 200
+    },
+    {
+        "url": "http://52.136.215.164/broken-links/index.html",
+        "statusCode": 200
+    },
+    {
+        "url": "http://52.136.215.164/broken-links/about.html",
+        "statusCode": 200
+    },
+    {
+        "url": "http://52.136.215.164/broken-links/blog.html",
+        "statusCode": 200
+    },
+    {
+        "url": "http://52.136.215.164/broken-links/blog-single.html",
+        "statusCode": 200
+    }
+]
+8 Valid Links 
+02019: 10: 13

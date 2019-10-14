@@ -1,0 +1,48 @@
+[
+    {
+        "url": "http://52.136.215.164/links/502gateaway502.php",
+        "statusCode": 502
+    },
+    {
+        "url": "http://52.136.215.164/links/access401unauthorized.php",
+        "statusCode": 401
+    },
+    {
+        "url": "http://52.136.215.164/links/deny403forbidden.php",
+        "statusCode": 403
+    },
+    {
+        "url": "http://52.136.215.164/links/404not404found404.php",
+        "statusCode": 404
+    },
+    {
+        "url": "http://52.136.215.164/links/teapot418.php",
+        "statusCode": 500
+    },
+    {
+        "url": "http://52.136.215.164/links/return500bad.php",
+        "statusCode": 500
+    },
+    {
+        "url": "http://52.136.215.164/links/no204content.php",
+        "statusCode": 204
+    },
+    {
+        "url": "http://52.136.215.164/links/movedper.php",
+        "statusCode": 301
+    },
+    {
+        "url": "http://52.136.215.164/links/found302.php",
+        "statusCode": 302
+    },
+    {
+        "url": "http://52.136.215.164/links/locked.php",
+        "statusCode": 423
+    },
+    {
+        "url": "http://52.136.215.164/links/un503availible.php",
+        "statusCode": 503
+    }
+]
+11 Broken Links
+02019: 10: 13
