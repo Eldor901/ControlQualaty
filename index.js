@@ -6,7 +6,7 @@ var tress = require('tress');
 var fs = require('fs');
 var moment = require('moment');
 var resolve = require('url').resolve;
-
+const isURL = require('isurl');
 
 var URL = 'http://52.136.215.164/broken-links/';
 var HOMEADRESS = 'http://52.136.215.164';
@@ -16,53 +16,66 @@ var validLinks = [];
 var visited = [];
 
 var now = moment();
-
-
 function WriteToFile(content, fileName){
     fs.writeFile(fileName, content + '\n', { flag: 'a' }, (err) => {})
 };
 
 
+function StatusCodeDefining(code, brokenLinks, validLinks, url) {
 
+    if(code !== 200)
+    {
+        brokenLinks.push({
+            url: url,
+            statusCode: code,
+        })
+    }else
+    {
+        validLinks.push({
+            url: url,
+            statusCode: code,
+        })
+    }
+
+
+}
+
+function AddingLinksToQueue(url, brokenLinks, res) {
+    var $ = cheerio.load(res.body);
+
+    if (url.includes(HOMEADRESS)) {
+        $('a').each(function () {
+            var href = $(this).attr('href');
+            if (href != undefined && href != "" && href != "#") {
+                var pushingUrl = resolve(URL, href);
+
+                if (!visited.includes(pushingUrl)) {
+                    visited.push(pushingUrl);
+                    if (pushingUrl.includes("http")) {
+                        q.push(pushingUrl);
+                    }else
+                        brokenLinks.push({
+                            url: pushingUrl,
+                            statusCode: undefined
+                        })
+                }
+
+            }
+
+        });
+    }
+}
 
 var q = tress(function(url, callback){
     needle.get(url, function(err, res){
         if (err)
-            throw err;
+            cosole.log(err); 
+        
+        var code =res.statusCode;
 
-        if(res.statusCode !== 200)
-        {
-            brokenLinks.push({
-                url: url,
-                statusCode: res.statusCode,
-            })
-        }else
-        {
-            validLinks.push({
-                url: url,
-                statusCode: res.statusCode,
-            })
-        }
-
-        var $ = cheerio.load(res.body);
-
-        $('a').each(function ()
-        {
-            var href = $(this).attr('href');
-            if (href != undefined && href != "" && href != "#") {
-                var pushingUrl = resolve(URL, href);
-                if (pushingUrl.includes(HOMEADRESS))
-                {
-                    if (!visited.includes(pushingUrl)){
-                        visited.push(pushingUrl);
-                        q.push(pushingUrl);
-                    }
-                }
-            }
-        });
-
-        callback()
-        ;
+        StatusCodeDefining(code, brokenLinks,  validLinks, url);
+        AddingLinksToQueue(url, brokenLinks, res );
+        callback();
     });
 }, 10);
 
@@ -75,5 +88,3 @@ q.drain = function(){
 };
 
 q.push(URL);
-
-

@@ -8,15 +8,11 @@
         "statusCode": 200
     },
     {
-        "url": "http://52.136.215.164/broken-links/pricing.html",
-        "statusCode": 200
-    },
-    {
         "url": "http://52.136.215.164/broken-links/work.html",
         "statusCode": 200
     },
     {
-        "url": "http://52.136.215.164/broken-links/index.html",
+        "url": "http://52.136.215.164/broken-links/pricing.html",
         "statusCode": 200
     },
     {
@@ -24,13 +20,21 @@
         "statusCode": 200
     },
     {
+        "url": "http://52.136.215.164/broken-links/blog-single.html",
+        "statusCode": 200
+    },
+    {
         "url": "http://52.136.215.164/broken-links/blog.html",
         "statusCode": 200
     },
     {
-        "url": "http://52.136.215.164/broken-links/blog-single.html",
+        "url": "http://52.136.215.164/broken-links/index.html",
+        "statusCode": 200
+    },
+    {
+        "url": "https://colorlib.com/",
         "statusCode": 200
     }
 ]
-8 Valid Links 
-02019: 10: 13
+9 Valid Links 
+02019: 10: 20

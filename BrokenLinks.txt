@@ -1,5 +1,11 @@
 [
     {
+        "url": "tel://1234567920"
+    },
+    {
+        "url": "mailto:info@yoursite.com"
+    },
+    {
         "url": "http://52.136.215.164/links/502gateaway502.php",
         "statusCode": 502
     },
@@ -16,6 +22,10 @@
         "statusCode": 404
     },
     {
+        "url": "http://52.136.215.164/links/un503availible.php",
+        "statusCode": 503
+    },
+    {
         "url": "http://52.136.215.164/links/teapot418.php",
         "statusCode": 500
     },
@@ -24,25 +34,21 @@
         "statusCode": 500
     },
     {
-        "url": "http://52.136.215.164/links/no204content.php",
-        "statusCode": 204
-    },
-    {
         "url": "http://52.136.215.164/links/movedper.php",
         "statusCode": 301
     },
     {
-        "url": "http://52.136.215.164/links/found302.php",
-        "statusCode": 302
+        "url": "http://52.136.215.164/links/no204content.php",
+        "statusCode": 204
     },
     {
         "url": "http://52.136.215.164/links/locked.php",
         "statusCode": 423
     },
     {
-        "url": "http://52.136.215.164/links/un503availible.php",
-        "statusCode": 503
+        "url": "http://52.136.215.164/links/found302.php",
+        "statusCode": 302
     }
 ]
-11 Broken Links
-02019: 10: 13
+13 Broken Links
+02019: 10: 20
